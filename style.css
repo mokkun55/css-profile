@@ -19,7 +19,7 @@ ul {
   background-color: white;
   display: flex;
   justify-content: space-between;
-  padding: 20px 30px;
+  padding: 10px 30px;
 }
 
 .header h1 {
@@ -40,7 +40,11 @@ ul {
 
 /* mainvisual */
 .mainvisual img {
+  /* imgは横 縦を指定、obvect-fit covorでトリミング */
   width: 100%;
+  max-width: 1920px;
+  height: 600px;
+  object-fit: cover;
 }
 
 /* About */
@@ -48,6 +52,7 @@ ul {
   padding-top: 100px;
   padding-bottom: 100px;
   text-align: center;
+  margin: 0 100px;
 }
 
 .about h2 {
@@ -61,15 +66,17 @@ ul {
   display: flex;
   align-items: center;
   text-align: left;
-  width: 500px;
+  /* width: 500px; */
   margin: 0 auto;
 }
 
 .about .profile2 {
-  padding-left: 50px;
+  /* padding-left: 50px; */
+  word-break: break-all;
 }
 
 .about img {
+  margin-right: 20px;
   width: 100px;
   border-radius: 50px;
 }
@@ -99,4 +106,25 @@ ul {
 
 .bicycle li {
   width: 32%;
+}
+
+@media screen and (max-width: 600px) {
+  .mainvisual img {
+    height: calc(100vh - 60px);
+  }
+
+  .about {
+    margin: 0 20px;
+  }
+  .about .profile {
+    flex-direction: column;
+  }
+
+  .about .profile2 {
+    margin: 0 50px;
+  }
+
+  .about img {
+    margin: 0;
+  }
 }
